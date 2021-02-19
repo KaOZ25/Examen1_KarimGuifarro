@@ -5,31 +5,54 @@
  */
 package examenlab1_karimguifarro;
 
+import java.util.ArrayList;
+
 
 public class usuario {
-private String usuario,contraseña,admin;
+private String codigo,nombre,apellido,edad,admin;
+private ArrayList <Inventario> libro=new ArrayList ();
     public usuario() {
     }
-    public usuario(String usuario, String contraseña, String admin) {
-        this.usuario = usuario;
-        this.contraseña = contraseña;
+
+    public usuario(String codigo, String nombre, String apellido, String edad, String admin) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
         this.admin = admin;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getCodigo() {
+        return codigo;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setCodigo(String codigo) {
+        if (codigo.length()==4) {
+        this.codigo = codigo;
+        }  }
+
+    public String getNombre() {
+        return nombre;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getEdad() {
+        return edad;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
     }
 
     public String getAdmin() {
@@ -39,4 +62,13 @@ private String usuario,contraseña,admin;
     public void setAdmin(String admin) {
         this.admin = admin;
     }
+
+    public ArrayList<Inventario> getLibro() {
+        return libro;
+    }
+
+    public void setLibro(ArrayList<Inventario> libro) {
+        this.libro = libro;
+    }
+    
 }

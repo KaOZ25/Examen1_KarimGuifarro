@@ -9,19 +9,23 @@ import java.util.Date;
 
 
 public class Inventario {
-  private String autores,titulo,genero,editoritales,idioma,ISBN;
-  private Date creacion;
+  private String autores,titulo,genero,editoriales,idioma,ISBN,año_ingreso,estado,libro_persona,cuenta_persona;
+  private String creacion;
 
     public Inventario() {
     }
 
-    public Inventario(String autores, String titulo, String genero, String editoritales, String idioma, String ISBN, Date creacion) {
+    public Inventario(String autores, String titulo, String genero, String editoriales, String idioma, String ISBN, String año_ingreso, String estado, String libro_persona, String cuenta_persona, String creacion) {
         this.autores = autores;
         this.titulo = titulo;
         this.genero = genero;
-        this.editoritales = editoritales;
+        this.editoriales = editoriales;
         this.idioma = idioma;
         this.ISBN = ISBN;
+        this.año_ingreso = año_ingreso;
+        this.estado = estado;
+        this.libro_persona = libro_persona;
+        this.cuenta_persona = cuenta_persona;
         this.creacion = creacion;
     }
 
@@ -49,12 +53,12 @@ public class Inventario {
         this.genero = genero;
     }
 
-    public String getEditoritales() {
-        return editoritales;
+    public String getEditoriales() {
+        return editoriales;
     }
 
-    public void setEditoritales(String editoritales) {
-        this.editoritales = editoritales;
+    public void setEditoriales(String editoritales) {
+        this.editoriales = editoritales;
     }
 
     public String getIdioma() {
@@ -73,17 +77,45 @@ public class Inventario {
         this.ISBN = ISBN;
     }
 
-    public Date getCreacion() {
+    public String getAño_ingreso() {
+        return año_ingreso;
+    }
+
+    public void setAño_ingreso(String año_ingreso) {
+        this.año_ingreso = año_ingreso;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getLibro_persona() {
+        return libro_persona;
+    }
+
+    public void setLibro_persona(String libro_persona) {
+        this.libro_persona = libro_persona;
+    }
+
+    public String getCuenta_persona() {
+        return cuenta_persona;
+    }
+
+    public void setCuenta_persona(String cuenta_persona) {
+        this.cuenta_persona = cuenta_persona;
+    }
+
+    public String getCreacion() {
         return creacion;
     }
 
-    public void setCreacion(Date creacion) {
+    public void setCreacion(String creacion) {
         this.creacion = creacion;
     }
 
-    @Override
-    public String toString() {
-        return "Inventario{" + "autores=" + autores + ", titulo=" + titulo + ", genero=" + genero + ", editoritales=" + editoritales + ", idioma=" + idioma + ", ISBN=" + ISBN + ", creacion=" + creacion + '}';
-    }
-  
+    
 }
