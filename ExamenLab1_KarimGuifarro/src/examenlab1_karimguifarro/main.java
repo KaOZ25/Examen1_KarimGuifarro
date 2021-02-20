@@ -102,8 +102,8 @@ public class main extends javax.swing.JFrame {
         signin = new javax.swing.JButton();
 
         adm.setLocation(new java.awt.Point(0, 0));
-        adm.setMaximumSize(new java.awt.Dimension(400, 400));
-        adm.setMinimumSize(new java.awt.Dimension(400, 400));
+        adm.setMaximumSize(new java.awt.Dimension(500, 500));
+        adm.setMinimumSize(new java.awt.Dimension(500, 500));
         adm.setResizable(false);
         adm.setSize(new java.awt.Dimension(400, 400));
 
