@@ -17,11 +17,10 @@ public class main extends javax.swing.JFrame {
         initComponents();
         DefaultComboBoxModel estad
                 = (DefaultComboBoxModel) cb_estado.getModel();
-        estad.addElement(new estado("Prestado"));
         estad.addElement(new estado("Disponible"));
         estad.addElement(new estado("Fuera de Inventario"));
-        ((estado) estad.getElementAt(0)).setNombre("Portugues");
-        estad.removeElementAt(3);
+        ((estado) estad.getElementAt(0)).setNombre("Prestado");
+        estad.removeElementAt(1);
 
         cb_estado.setModel(estad);
     }
@@ -586,18 +585,14 @@ public class main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
-        String usser, passs, admin = "1324";
-        usser = user.getText();
-        passs = pass.getText();
-        for (int i = 0; i < use.size(); i++) {
-            if (use.get(i).equals(usser) && use.get(i).equals(passs) && use.get(i).equals(admin)) {
+        String codigo, admin = "1324";
+        codigo = user.getText();
+        JOptionPane.showMessageDialog(this,
+                 "para ser admin ingresar codigo 1324");
+           
                 adm.setVisible(true);
-                dispose();
-            } else {
-                reg.setVisible(true);
-                
-            }
-        }
+            
+        
     }//GEN-LAST:event_loginMouseClicked
 
     private void signinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signinMouseClicked
